@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badr HASSAB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="icon" type="image/png" href="Imgs/B (1).png">
+</head>
+<body>
+    <script src="portfolio_dynamics.js"></script>
+    <header>
+        <a href="#" class="logo">Badr HASSAB</a>
+        <nav>
+            <ul>
+                <li><a href="#aboutMe">About me</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="main">
+        <div class="partI">
+            <h1>
+                Hi, I'm <br>
+                <span class="spanLogo">Badr HASSAB</span> <br>
+                <span class="spanAnim">I am<span style="color: #1800AD; margin-left: 20px;" id="dynamicTxt"><script>writeDescription();</script></span><span id="cursor" style="color: #1800AD;">|</span></span>
+            </h1>
+            <a href="Files/Badr HASSAB (8).pdf" download style="text-decoration: none; color: azure;"><button class="btn" style="margin-left: 50px;">Download resume</button></a>
+        </div>
+        <img src="Imgs/Untitled design (2)1.png">
+    </section>
+    <section id="aboutMe">
+        <h1 class="title">About me</h1>
+        <p>
+            Hello! I am Badr, I’m 19 years old and I’m a student in computer engineering, a game developer and a content creator at <a href="https://www.instagram.com/badrr_dev/" target="_blank">@badrr_dev</a>. <br>
+            I am passionate about building clean, user-friendly digital experiences and developing interactive games. I am constantly improving my technical skills and exploring new areas in software development and design.
+        </p>
+        <div class="knowCards">
+            <div class="kCard">
+                <h3>Languages</h3>
+                <ul>
+                    <li>Arabic - Native</li>
+                    <li>English - C1</li>
+                    <li>French - B2</li>
+                    <li>German - A1</li>
+                </ul>
+            </div>
+            <div class="kCard">
+                <h3>Technical skills</h3>
+                <ul>
+                    <li><b>Programming:</b> HTML, CSS, C</li>
+                    <li><b>OS:</b> Windows, Linux</li>
+                    <li><b>Software:</b> Word, Packet tracer</li>
+                </ul>
+            </div>
+            <div class="kCard">
+                <h3>Soft skills</h3>
+                <ul>
+                    <li>Problem solving</li>
+                    <li>Teamwork</li>
+                    <li>Public speaking</li>
+                </ul>
+            </div>
+        </div>
+        <div style="float: flex; text-align: center;">
+            <a href="MoreAbout.html" style="text-decoration: none; color: azure;"><button class="btn">Know Badr more</button></a>
+        </div>
+    </section>
+    <section id="Projects">
+        <h1 class="title">Projects</h1>
+        <div class="projectCards">
+            <div class="pCard">
+                <img src="https://img.itch.zone/aW1hZ2UvMzg1MDgwMy8yMjk2NzMwMC5wbmc=/original/HhVYoW.png">
+                <h3>Skippi</h3>
+                <p>
+                    It's a singleplayer party game, like Fall Guys but offline, made especially for <b>Brackeys gamejam 2025.2</b>
+                </p>
+                <button class="pBtn"><a href="https://youtu.be/yR0Ns7P5058?si=SMBH1ZSjooh1uuy2" target="_blank" style="text-decoration: none; color: azure;">View trailer</a></button>
+            </div>
+            <div class="pCard">
+                <img src="Imgs/Screenshot 2025-05-28 144543.png">
+                <h3>eCamp</h3>
+                <p>
+                    A project born from our team's shared passion for the outdoors and built together to create the ultimate camping experience.
+                </p>
+                <button class="pBtn"><a href="https://www.instagram.com/p/DKM0FSMIDnA/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank" style="text-decoration: none; color: azure;">View post</a></button>
+            </div>
+            <div class="pCard">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230803111137/Hangman-Game.webp">
+                <h3>Hangman game</h3>
+                <p>
+                    Using the C language, implemented basic features, like a receipt resuming the game.
+                </p>
+                <button class="pBtn"><a href="https://github.com/Ninjaofgames/HangmanGame" target="_blank" style="text-decoration: none; color: azure;">View repository</a></button>
+            </div>
+        </div>
+        <div style="float: flex; text-align: center;">
+            <a href="MoreAbout.html#projectsS" style="text-decoration: none; color: azure;"><button class="btn">More Projects</button></a>
+        </div>
+    </section>
+    <section id="Contact">
+        <h1 class="title">Contact</h1>
+        <form action="https://formspree.io/f/xzzykbzw" method="POST">
+            <label>
+                Name:
+                <input type="text" name="fName">
+            </label> <br>
+            <label>
+                Your email:
+                <input type="email" name="email">
+            </label> <br>
+            <label>
+                Your message: <br>
+                <textarea name="message"></textarea>
+            </label> <br>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </section>
+    <footer>
+        <h2>Quick Links</h3>
+        <div style="display: flex; justify-content: space-around;">
+            <ul>
+                <li><a href="https://www.facebook.com/badr.hassab.1" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://wa.me/212658238111" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="https://www.instagram.com/badrr_dev/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.tiktok.com/@badrr_dev" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="https://www.youtube.com/@badrr_dev" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/badr-hassab" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href="https://github.com/Ninjaofgames" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+        </div>
+        <h3>All rights reserved, Badr HASSAB, 2025.</h3>
+    </footer>
+</body>
+</html>

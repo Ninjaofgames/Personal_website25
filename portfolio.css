@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: "Google Sans Code", monospace;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url('Imgs/Background2.png');
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(3px);
+  z-index: -1;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0);
+    color: azure;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+    width: 95%;
+    margin: 0 20px;
+    top: 10px;
+}
+
+header a.logo{
+    text-decoration: none;
+    color: azure;
+    font-size: 44px;
+    font-weight: 900;
+    padding: 0 10px;
+    transition: all 0.5s;
+}
+
+header a.logo:hover{
+    color: #1800AD;
+}
+
+header nav ul{
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: azure;
+    margin: 0 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: all 0.5s;
+}
+
+header nav ul li a:hover{
+    border-bottom: 3px solid #1800AD;
+}
+
+#main{
+    margin-top: 200px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#main .partI h1{
+    color: azure;
+}
+
+#main .partI h1 .spanLogo{
+    color: #1800AD;
+    font-size: 54px;
+    margin-left: 50px;
+}
+
+button.btn{
+    background-color: #1800AD;
+    color: azure;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+button.btn:hover{
+    transform: scale(1.1);
+    opacity: 0.75;
+}
+
+button.btn:active{
+    transform: scale(0.99);
+    opacity: 0.5;
+}
+
+#main img{
+    margin-top: -50px;
+    height: 400px;
+    width: 700px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+h1.title{
+    color: #1800AD;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+#aboutMe p{
+    color: azure;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 50px;
+    text-align: justify;
+}
+
+#aboutMe p a{
+    color: azure;
+    text-decoration: none;
+    transition: all 0.25s;
+    font-style: italic;
+}
+
+#aboutMe p a:hover{
+    color: #1800AD;
+}
+
+.knowCards, .projectCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.knowCards .kCard{
+    display: inline-block;
+    background-color: #000000;
+    border-radius: 20px;
+    border: none;
+    width: fit-content;
+    padding: 0 20px;
+    margin: 20px;
+    animation: glowing 2s ease-in-out infinite;
+    transition: all 0.5s;
+    max-width: 300px;
+}
+
+.knowCards .kCard:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.knowCards .kCard h3{
+    color: #1800AD;
+    text-align: center;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.knowCards .kCard ul li{
+    text-align: left;
+    color: azure;
+    margin-left: -10px;
+}
+
+@keyframes glowing {
+    0% {box-shadow: 1px 1px 11px 4px rgba(255, 255, 255, 0.5);}
+    50% {box-shadow: 1px 1px 4px 1px rgba(255, 255, 255, 0.5);}
+    100% {box-shadow: 1px 1px 11px 4px rgba(255, 255, 255, 0.5);}
+}
+
+.projectCards .pCard{
+    display: inline-block;
+    background-color: #000000;
+    border-radius: 20px;
+    border: none;
+    width: fit-content;
+    padding: 0 0 20px 0;
+    margin: 20px;
+    animation: glowing 2s ease-in-out infinite;
+    transition: all 0.5s;
+    max-width: 300px;
+    height: fit-content;
+    text-align: center;
+}
+
+.projectCards .pCard img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.projectCards .pCard h3{
+    color: #1800AD;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.projectCards .pCard p{
+    color: azure;
+    padding: 0 20px;
+    font-size: 17.5px;
+}
+
+.pBtn{
+    background-color: #1800AD;
+    color: azure;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+button.pBtn:hover{
+    transform: scale(1.1);
+    opacity: 0.75;
+}
+
+button.pBtn:active{
+    transform: scale(0.99);
+    opacity: 0.5;
+}
+
+#Contact{
+    text-align: center;
+}
+
+form{
+    display: inline-block;
+    background-color: #000000;
+    padding: 30px;
+    animation: glowing 2s ease-in-out infinite;
+    color: azure;
+    border-radius: 20px;
+    border: none;
+}
+
+form label{
+    font-size: 17px;
+    font-weight: 700;
+}
+
+form input, textarea{
+    background-color: rgba(0, 0, 0, 0);
+    color: azure;
+    border-radius: 10px;
+    border: 1px solid azure;
+    padding: 10px;
+    font: inherit;
+    margin: 20px;
+}
+
+footer{
+    margin-top: 30px;
+    background-color: #1800AD;
+    color: azure;
+    padding: 10px;
+    text-align: center;
+}
+
+footer::selection{
+    background-color: azure;
+    color: #1800AD;
+}
+
+footer ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 0 20px;
+}
+
+footer ul li{
+    margin-right: 10px;
+}
+
+footer ul li a{
+    color: azure;
+    font-size: 30px;
+    transition: all 0.5s;
+}
+
+footer ul li a:hover{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#cursor {
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 0.6s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#languages{
+    margin-top: 100px;
+}
