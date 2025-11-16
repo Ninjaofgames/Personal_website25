@@ -30,7 +30,7 @@ header{
     flex-wrap: wrap;
     justify-content: space-between;
     position: fixed;
-    z-index: 999;
+    z-index: 998;
     width: 95%;
     margin: 0 20px;
     top: 10px;
@@ -280,6 +280,7 @@ footer{
     color: azure;
     padding: 10px;
     text-align: center;
+    bottom: 0;
 }
 
 footer::selection{
@@ -325,4 +326,44 @@ footer ul li a:hover{
 
 #languages{
     margin-top: 100px;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 999;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100%;
+        width: 200px;
+        background: #0084ff;
+        flex-direction: column;
+        align-items: start;
+        padding: 60px 20px;
+        gap: 30px;
+        transition: right 0.3s ease;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .burger {
+        display: flex;
+    }
 }
