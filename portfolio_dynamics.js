@@ -64,12 +64,38 @@ function writeDescription() {
     animateWord();
 }
 
-writeDescription();
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize text animation
+    writeDescription();
 
+    // Burger menu functionality
+    const burger = document.getElementById("burger");
+    const navLinks = document.getElementById("nav-links");
 
-const burger = document.getElementById("burger");
-const navLinks = document.getElementById("nav-links");
+    if (burger && navLinks) {
+        // Toggle menu when burger is clicked
+        burger.addEventListener("click", function(e) {
+            e.stopPropagation();
+            navLinks.classList.toggle("active");
+            burger.classList.toggle("active");
+        });
 
-burger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+        // Close menu when clicking on a link
+        const menuLinks = navLinks.querySelectorAll("a");
+        menuLinks.forEach(function(link) {
+            link.addEventListener("click", function() {
+                navLinks.classList.remove("active");
+                burger.classList.remove("active");
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function(e) {
+            if (!burger.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove("active");
+                burger.classList.remove("active");
+            }
+        });
+    }
 });
